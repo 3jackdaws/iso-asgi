@@ -1,0 +1,29 @@
+<nav id="nav">
+    <div class="nav-wrapper" style="padding-left: 15px; font-weight: 300">
+
+        <a href="/" class="brand-logo center">
+            <img src="/static/img/isocube.png" height="32" width="32" style="display: inline; margin-bottom: -5px">
+            ISOGEN
+        </a>
+        <a id="navbar-hamburger" href="#" data-activates="mobile-menu" class="button-collapse show-on-large" style="margin-left: 0"><i class="material-icons">menu</i></a>
+        <ul class="side-nav" id="mobile-menu">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/photography/">PHOTOGRAPHY</a></li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader">PROJECTS</a></li>
+            <li><a href="/soundcloud/">SOUNDCLOUD DOWNLOADER</a></li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader">LINKS</a></li>
+            <li><a href="https://github.com/3jackdaws">GITHUB</a></li>
+            <li><a href="https://www.linkedin.com/in/ian-m-murphy/">LINKEDIN</a></li>
+        </ul>
+    </div>
+</nav>
+<script>
+    window.addEventListener('load', function () {
+        $("#navbar-hamburger").sideNav({
+
+        });
+        $('.dropdown-content').dropdown();
+    })
+</script>

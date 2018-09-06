@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>{{ title }}</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/materialize.min.css?v2">
+    <link rel="stylesheet" href="/static/css/fancybox.min.css">
+    <link rel="stylesheet" href="/static/css/custom.css">
+    <link rel="shortcut icon" href="/static/img/isocube.png?v=1.2"/>
+    {% block head_extra %}
+
+    {% endblock %}
+</head>
+<body>
+
+
+{% include 'components/navbar.html' %}
+<main>
+{% block content %}
+
+{% endblock %}
+</main>
+{% block footer %}
+<footer class="page-footer">
+    <div class="container">
+        {% block footer_content %}
+
+        {% endblock %}
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2018 ISOGEN.net
+            <a class="grey-text text-lighten-4 right" href="https://github.com/3jackdaws/isogen-one/tree/sanic">ISOGEN.net on GitHub</a>
+        </div>
+    </div>
+</footer>
+{% endblock %}
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/static/js/fancybox.min.js"></script>
+<script src="/static/js/materialize.min.js"></script>
+<script src="/static/js/common.js?v=2"></script>
+{% block scripts %}
+{% endblock %}
+</body>
+</html>

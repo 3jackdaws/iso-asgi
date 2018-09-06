@@ -1,0 +1,159 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+
+.image{
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 2px;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+.image:before{
+    content: '';
+    padding-top: 100%;
+    display: table;
+}
+
+.image.visible{
+    opacity: 1;
+}
+
+.image a {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery {
+    display: flex;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 2px;
+}
+
+.gallery a img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (min-width: 620px) {
+  .gallery > .image {
+    flex-basis: 33.33333%;
+  }
+}
+
+
+@media (min-width: 1040px) {
+  .gallery > .image {
+    flex-basis: 25%;
+  }
+}
+
+@media (min-width: 1250px) {
+  .gallery > .image {
+    flex-basis: 25% ;
+  }
+}
+
+.loads-image{
+    width: 100%;
+    height: 500px;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 2s;
+}
+
+.contains-image{
+    width: 100%;
+    /*background-position: center center;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.cover{
+    width: 100%;
+    height: 100%;
+}
+
+body, html{
+    background-color: #2d2d2d;
+}
+
+
+
+nav, #nav, nav#nav{
+    z-index: 9999;
+    background-color: rgba(0,0,0,0.1) !important;
+    position: relative;
+    box-shadow: none;
+}
+
+.image-cover{
+    width: 150px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+.info-panel{
+    display: inline-block;
+    float: left;
+}
+
+.track-plays{
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.track-plays i{
+    margin-bottom: -6px;
+}
+
+.track-duration{
+
+}
+
+.track-info{
+    text-align: left;
+}
+
+.plays-likes-info{
+    position: absolute;
+    right: 0;
+
+}
+
+li.track{
+    position: relative;
+}
+
+#track-count{
+    position: absolute;
+    right: 0;
+    top:0;
+    margin: 10px;
+    font-size: 14px;
+}
+
+.relative{
+    position: relative;
+}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="page-header loads-image" style="margin-top: -64px; height: 100vh" data-image="/static/img/backgrounds/fog.jpg?v=2">
+
+    </div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    window.addEventListener('load', function () {
+        $('#nav').addClass('transparent');
+        $.each($('.loads-image'), function (i,e) {
+            LoadImage(e);
+        })
+    })
+</script>
+
+{% endblock %}
